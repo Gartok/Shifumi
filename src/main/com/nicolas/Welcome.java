@@ -17,8 +17,7 @@ public class Welcome {
     public void init() {
         String result = "r";
         
-        while (result == "r")
-        {
+        while (result == "r") {
             this.play();
 
             System.out.print("\n Rejouer ? (Pour rejouer faites le r"

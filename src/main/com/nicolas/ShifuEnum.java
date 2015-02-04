@@ -2,13 +2,20 @@ package com.nicolas;
 
 
 /**
- * 
- * @author Nicolas
- *
+ * Shifumi enumerator can select Rock, Paper, Scissor.
  */
 public enum ShifuEnum {
+    /**
+     * Rock enum.
+     */
     ROCK(0),
+    /**
+     * Paper enum.
+     */
     PAPER(1),
+    /**
+     * Scissor enum.
+     */
     SCISSOR(2);
     
     /** 
@@ -19,29 +26,31 @@ public enum ShifuEnum {
     
     /**
      * Constructor.
-     * @param value
-     * @param name
+     * @param value enum value
      */
     private ShifuEnum(int value) {
         this.value = value;
     }
     
+    /**
+     * Get Enum value.
+     * @return value {@link Integer}
+     */
     public int getValue() {
         return this.value;
     }
     
-    public static ShifuEnum ConvertValue(String value)
-    {
+    public static ShifuEnum ConvertValue(String value) {
+        ShifuEnum result = null;
+        
         if (value.equals("FEUILLE")) {
-            return ShifuEnum.PAPER;
-        }
-        else if (value.equals("CISEAUX")) {
-            return ShifuEnum.SCISSOR;
-        }
-        else if (value.equals("PIERRE")) {
-            return ShifuEnum.ROCK;
+            result = ShifuEnum.PAPER;
+        } else if (value.equals("CISEAUX")) {
+            result = ShifuEnum.SCISSOR;
+        } else if (value.equals("PIERRE")) {
+            result = ShifuEnum.ROCK;
         }
         
-        return null;
+        return result;
     }
 }

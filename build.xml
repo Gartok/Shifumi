@@ -1,5 +1,12 @@
 <?xml version="1.0"?>
 <project name="Shifumi" default="compile">
+    
+    <path id="findbugdir">
+        <fileset dir="lib/" >
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
 	<target name="clean" description="Clean All project">
 		<delete dir="bin" />
 		<delete dir="dist" />
@@ -18,4 +25,22 @@
 			</manifest>
 		</jar>
 	</target>
+	<target name="checkstyle" description="Check quality">
+	    <taskdef resource="checkstyletask.properties"
+	        classpath="C:\Users\Nicolas\apache-ant\lib\checkstyle-6.3-all.jar" />
+	    <checkstyle config="checkstyle_rules.xml" >
+	        <fileset dir="src/main" includes="**/*"/>
+	    </checkstyle>
+	</target>
+	<target name="findbug" description="Find all bug">
+	    <taskdef name="findbug" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+            classpathref="findbugdir" />
+	    <findbug home="lib/"
+	        output="html"
+	        outputFile="dist\findbug-report.html">
+	        <sourcePath path="src/main" />
+	        <class location="bin" />
+	    </findbug>
+    </target>
+    
 </project>

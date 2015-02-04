@@ -1,8 +1,4 @@
 /**
- * 
- */
-/**
- * @author Nicolas
- *
+ * Package name.
  */
 package com.nicolas;
