@@ -1,3 +1,7 @@
+/**
+ * Welcome.java
+ * @author Nicolas
+ */
 package com.nicolas;
 
 import java.util.Date;
@@ -6,7 +10,6 @@ import java.util.Scanner;
 
 /**
  * Welcome class.
- * @author Nicolas
  *
  */
 public class Welcome {

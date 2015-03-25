@@ -1,3 +1,7 @@
+/**
+ * MainActivity.java
+ * @author Nicolas
+ */
 package com.nicolas;
 
 /**

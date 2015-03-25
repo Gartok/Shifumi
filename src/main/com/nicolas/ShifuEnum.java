@@ -1,3 +1,7 @@
+/**
+ * ShifuEnum.java
+ * @author Nicolas
+ */
 package com.nicolas;
 
 
@@ -17,12 +21,10 @@ public enum ShifuEnum {
      * Scissor enum.
      */
     SCISSOR(2);
-    
     /** 
      * Enum value.
      */
     private int value;
-    
     
     /**
      * Constructor.

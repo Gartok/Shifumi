@@ -1,5 +1,6 @@
 /**
- * 
+ * GamePlay.java
+ * @author Nicolas
  */
 package com.nicolas;
 
@@ -34,7 +35,6 @@ public class GamePlay {
         }
         
         return result;
-        
     }
     
     /**

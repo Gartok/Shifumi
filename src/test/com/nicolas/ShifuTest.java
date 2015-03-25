@@ -1,5 +1,6 @@
 /**
- * 
+ * ShifuTest.java
+ * @author Nicolas
  */
 package com.nicolas;
 
