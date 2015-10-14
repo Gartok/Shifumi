@@ -11,6 +11,10 @@ dependencies {
   testCompile 'junit:junit:4.11'
 }
 
+checkstyle {
+    ignoreFailures = true
+}
+
 sourceSets {
     test {
         java {
