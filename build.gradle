@@ -27,15 +27,3 @@ task compile(dependsOn: [jar, test, check]) << {
     println 'compiling source'
 
 }
-
-task compileTest(dependsOn: compile) << {
-    println 'compiling unit tests'
-}
-
-task tests(dependsOn: [compile, compileTest]) << {
-    println 'running unit tests'
-}
-
-task dist(dependsOn: [compile, tests]) << {
-    println 'building the distribution'
-}
