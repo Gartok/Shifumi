@@ -13,6 +13,13 @@ jacocoTestReport {
     }
 }
 
+test {
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }               
+}
+
 dependencies {
   testCompile 'junit:junit:4.11'
 }
