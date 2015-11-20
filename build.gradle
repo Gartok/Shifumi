@@ -1,8 +1,16 @@
 apply plugin: 'java'
 apply plugin: 'checkstyle'
+apply plugin: 'jacoco'
 
 repositories {
     mavenCentral()
+}
+
+jacocoTestReport {
+    reports {
+        xml.enabled true
+        html.enabled = true
+    }
 }
 
 dependencies {
@@ -12,6 +20,8 @@ dependencies {
 checkstyle {
     ignoreFailures = true
 }
+
+check.dependsOn jacocoTestReport
 
 sourceSets {
     test {
